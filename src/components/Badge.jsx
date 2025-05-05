@@ -6,6 +6,7 @@ export default function Badge({ title, children }) {
                 {children}
 
                 <p>Lorem, ipsum dolor.</p>
+                <p>Lorem ipsum dolor sit.</p>
             </div>
         </div>
     )
