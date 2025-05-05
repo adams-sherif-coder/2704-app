@@ -1,23 +1,33 @@
-import Header from './Header'
-import Button, { LinkBtn, GroupBtn } from './Buttons'
+import { Card, Dropdown, DropdownItem } from 'flowbite-react'
 
-
-import { GroupBtn as RbsGbtn } from './React-Bootstap/Button'
-import Alert from './Alert'
+import Counter from "./components/Counter"
 
 export default function App() {
+    console.log('App Component rendered');
 
-  return (
-    <div>
-      <h2>App Modify 2</h2>
-      <p>Lorem, ipsum dolor.</p>
-      
-      <Alert color='darkgreen' bgColor='lightgreen'>
-        <h3>Success Alert</h3>
-        <p>Saved Successfully!!!. </p>
-      </Alert>
-    </div>
-  )
+    return (
+        <div className="h-screen">
+
+            <Dropdown label="Dropdown button" dismissOnClick={false}>
+                <DropdownItem>Dashboard</DropdownItem>
+                <DropdownItem>Settings</DropdownItem>
+                <DropdownItem>Earnings</DropdownItem>
+                <DropdownItem>Sign out</DropdownItem>
+            </Dropdown>
+
+            <Card href="#" className="max-w-sm">
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Noteworthy technology acquisitions 2021
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                </p>
+            </Card>
+
+
+
+            <Counter />
+
+        </div>
+    )
 }
-
-
