@@ -1,5 +1,10 @@
-export default function Badge({ children }) {
+export default function Badge({ title, children }) {
     return (
-        <div>{children}</div>
+        <div>
+            <h3>{title}</h3>
+            <div>
+                {children}
+            </div>
+        </div>
     )
 }
