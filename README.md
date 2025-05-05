@@ -49,3 +49,12 @@ git restore file_path
 ```bash
 git restore .
 ```
+## show the remote origin url
+```bash
+git remote show origin
+```
+
+## change the remote origin url
+```bash
+git remote set-url origin REPO_URL
+```
