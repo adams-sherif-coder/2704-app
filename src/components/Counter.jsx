@@ -23,14 +23,15 @@ export default function Counter() {
 
 
     return (
-        <Container tailwind='flex flex-col bg-zinc-100'>
+        <Container tailwind='flex flex-col bg-zinc-100 max-w-xl m-auto'>
 
             <Title>Counter</Title>
 
-
-            <Button action={() => showMsg('Maged')}>Type Maged</Button>
-            <Button action={() => showMsg('Adam')}>Type Adam</Button>
-            <Button action={() => showMsg('Alyaa')}>Type Alyaa</Button>
+            <div className="flex gap-5 m-auto mb-12">
+                <Button action={() => showMsg('Maged')}>Type Maged</Button>
+                <Button action={() => showMsg('Adam')}>Type Adam</Button>
+                <Button action={() => showMsg('Alyaa')}>Type Alyaa</Button>
+            </div>
 
             <Container isFlexCenter={true} tailwind="gap-4">
                 <Button tw="bg-green-400" action={() => changeNumber(1)}>+</Button>
@@ -42,16 +43,16 @@ export default function Counter() {
 
             <Container isFlexCenter={true}>
                 <Button action={() => changeNumber(5)}>+5</Button>
-                <Button>+10</Button>
-                <Button>+20</Button>
+                <Button action={() => changeNumber(10)}>+10</Button>
+                <Button action={() => changeNumber(20)}>+20</Button>
             </Container>
 
             <Title tailwind='text-red-700'>Decrease</Title>
 
             <Container isFlexCenter={true} >
-                <Button>-5</Button>
-                <Button>-10</Button>
-                <Button>-20</Button>
+                <Button action={() => changeNumber(-5)}>-5</Button>
+                <Button action={() => changeNumber(-10)}>-10</Button>
+                <Button action={() => changeNumber(-20)}>-20</Button>
             </Container>
 
 

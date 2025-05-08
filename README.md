@@ -58,3 +58,23 @@ git remote show origin
 ```bash
 git remote set-url origin REPO_URL
 ```
+
+## add remote origin 
+```bash
+git remote add origin REPO_URL
+```
+
+## add remote upstream 
+```bash
+git remote add upstream REPO_URL
+```
+
+## download updates from remote repo
+```bash
+git pull origin main
+```
+
+## upload updates to remote repo
+```bash
+git push origin main
+```
